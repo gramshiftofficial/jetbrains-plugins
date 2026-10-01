@@ -1,0 +1,37 @@
+name: Bug report
+description: Something in one of the plugins does not work as described
+labels: [bug]
+body:
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Plugin
+      options:
+        - Copy Files for AI Prompts
+        - Secret Scanner for Git
+        - Dotenv Guard
+        - Agent Eyes
+        - Gitea & Forgejo Pull Requests
+        - XLSX Editor + Agent Reader
+        - Test Run Verdict
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin version and IDE version
+      placeholder: "Test Run Verdict 2026.1.0, IntelliJ IDEA 2026.1.5"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead. Do not paste tokens or passwords.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Stack trace or log (optional)
+      render: text

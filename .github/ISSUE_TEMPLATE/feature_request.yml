@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement to one of the plugins
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Plugin
+      options:
+        - Copy Files for AI Prompts
+        - Secret Scanner for Git
+        - Dotenv Guard
+        - Agent Eyes
+        - Gitea & Forgejo Pull Requests
+        - XLSX Editor + Agent Reader
+        - Test Run Verdict
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like the plugin to do?
+    validations:
+      required: true
